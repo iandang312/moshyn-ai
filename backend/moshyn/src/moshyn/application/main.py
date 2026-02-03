@@ -19,7 +19,7 @@ app.add_middleware(
 
 @app.get("/")
 async def root():
-    return {"message": "Welcome to Moshyn API"}
+    return {"message": "Welcome to Moshyn API built by Jeffrey Chao and Ian Dang"}
 
 @app.get("/health")
 async def health_check():
