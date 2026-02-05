@@ -2,11 +2,11 @@ FROM python:3.13
 WORKDIR /usr/local/app
 
 # Install the application dependencies
-COPY backend/requirements.txt ./
-RUN pip install --no-cache-dir -r requirements.txt
+COPY backend/moshyn/pyproject.toml ./
+RUN pip install --no-cache-dir .
 
 # Copy in the source code
-COPY backend/moshyn/src/moshyn ./moshyn
+COPY backend/moshyn/src ./moshyn
 EXPOSE 8080
 
 # Setup an app user so the container doesn't run as the root user
